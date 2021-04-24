@@ -1,0 +1,23 @@
+DATABASE pitzer_O2-CH4-N2-MgCO3-Uranium-update_20200827.dat
+SOLUTION 1
+      temp  100
+      pressure 300
+      pH    7
+      pe    4
+      units mol/kgw
+      Na 0.1
+      Cl 0.1 charge
+
+EQUILIBRIUM_PHASES 7
+#CO2(g)    1.99 1000   # TR fugacity coeff 0.461, pressure (after 2nd TS) 212 bar
+Halite         0 0
+Magnesite      0 0.0
+Anhydrite  0.0 1.0
+Gypsum 0.0 0.0 
+Calcite 0.0 0.0
+#Albite_high 0.0 1.0
+
+END
+
+
+

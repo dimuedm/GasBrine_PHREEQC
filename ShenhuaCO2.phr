@@ -1,0 +1,63 @@
+#Shiqianfeng formation
+DATABASE shellptiz_v20120208_Quest_MacInnes_F.dat
+SOLUTION 1
+      temp  62
+      pressure 189
+      pH    6.68
+      pe    3
+      units mol/kgw
+      Ca    5.66E-02 Calcite
+      Mg    5.59E-13 Dolomite-dis
+      Na    4.19e-1 #Halite #4.19e-1 
+      K     1.82E-03 #Illite
+      Fe    1.25E-05
+      Cl    5.06E-1  charge # 5.06E-1 charge
+      C     6.5e-4 
+      S     1.85E-02  Anhydrite
+      Al    2.77E-08 Smectite-Na
+      Si    5.89E-04 Quartz
+
+EQUILIBRIUM_PHASES 7
+#CO2(g)    1.99 1000   # TR fugacity coeff 0.461, pressure (after 2nd TS) 212 bar
+Halite         0 0
+#K-Feldspar     0 5.051
+#Calcite        0 6.498781
+#Dolomite-dis   0 1.866542
+#Kaolinite      0 1.207851
+#Smectite-Na    0 1.056524
+#Illite         0 5.230421
+#Quartz         0 116.3508
+#K-Feldspar     0 1.0
+Magnesite      0 0.0
+#Analcime  0.0 1.0
+Anhydrite  0.0 0.0
+#Albite_high 0.0 1.0
+
+KINETICS 7
+Quartz
+  -m0 116.3508 # initial reactant moles.
+  -parms 0.007721 0 0 1 1
+Smectite-Na
+  -m0 1.056524 # initial reactant moles.
+  -parms 0.2357 0 0 1 1
+Illite
+  -m0 5.230421 # initial reactant moles.
+  -parms 0.2470 0 0 1 1
+Kaolinite
+  -m0 1.207851 # initial reactant moles.
+  -parms 0.1661 0 0 1 1
+  
+Calcite 
+  -m0   6.498781
+  -parms 0.1 0 0 1 1
+  
+Dolomite-dis
+  -m0   1.866542
+  -parms 0.1 0 0 1 1  
+
+-cvode true  # RK gives different results, only for smaller TS size gives closer results to cvode; cvode gives same results for smaller TS. Q: why??? could not improve RK results by changing to level 6 or tighten tolerances!!!???
+
+END
+
+
+
